@@ -1,3 +1,16 @@
+## Intro ##
+
+Este es un análisis del catálogo de precios de la marca automovilística BMW para el año 2026, comparando entre diferentes países del entorno europeo: España, Alemania, Francia, Portugal e Italia (Unión Europea) y tomando como referencia de país neutral Suiza.
+El presente proyecto sigue una metodología de ciencia de datos siguiendo varias fases: 
+- Manipulación e inspección de dataset: mediante tareas básicas como control de calidad de los datos con la librería **pandas**.
+- Chequeo de nulos
+- Estructura del DataFrame y su contenido (matriz de filas y columnas)
+- **Lipieza de strings** y unificación de Dataframe externos
+- Análisis estadístico y detección de valores atípicos: Outliers con IQR o Rango intercuartílico, índices de dispersión, coeficientes de variación (CV), desviación estándar, aplicación de lógica de negocio, segmentación por tipos de carrocería, estrategias de *pricing* de la gama X vs. familiar o Touring.
+- Visualización y modelado de negocio: matrices de correlación que reflejan la co dependencia de preciso entre países (incluso con divisas diferentes). Impacto de carga impositiva en función del país e influencia de ésta en los preciso finales.
+- Simulación de **financiación a través de BMW Select (o BMW Bank en su defecto)** mediante el análisis de de las condiciones de obtención de crédito (TAE, TIN, cuotas mensuales, cuota final.
+- Índice de arbitraje geográfico: identificar el top 5 de modelos con mayor brecha de precio en Europa, que revelan oportunidades de compra donde el precio máximo duplica o triplica el precio de fábrica, y la posibilidad de comprar a través de importación. 
+
 ## 📊 Descripción de Gráficos y Visualizaciones
 
 El proyecto incluye un apartado de analítica visual, que permite asimilar los datos de fijación de precios por medio de diferentes enfoques estadísticos:
