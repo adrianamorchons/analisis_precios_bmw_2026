@@ -8,7 +8,7 @@ El presente proyecto sigue una metodología de ciencia de datos siguiendo varias
 - **Lipieza de strings** y unificación de Dataframe externos
 - Análisis estadístico y detección de valores atípicos: Outliers con IQR o Rango intercuartílico, índices de dispersión, coeficientes de variación (CV), desviación estándar, aplicación de lógica de negocio, segmentación por tipos de carrocería, estrategias de *pricing* de la gama X vs. familiar o Touring.
 - Visualización y modelado de negocio: matrices de correlación que reflejan la co dependencia de preciso entre países (incluso con divisas diferentes). Impacto de carga impositiva en función del país e influencia de ésta en los preciso finales.
-- Simulación de **financiación a través de BMW Select (o BMW Bank en su defecto)** mediante el análisis de de las condiciones de obtención de crédito (TAE, TIN, cuotas mensuales, cuota final.
+- Simulación de **financiación a través de BMW Select** mediante el análisis de de las condiciones de obtención de crédito (TAE, TIN, cuotas mensuales, cuota final.
 - Índice de arbitraje geográfico: identificar el top 5 de modelos con mayor brecha de precio en Europa, que revelan oportunidades de compra donde el precio máximo duplica o triplica el precio de fábrica, y la posibilidad de comprar a través de importación. 
 
 ## 📊 Descripción de Gráficos y Visualizaciones
