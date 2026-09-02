@@ -1,9 +1,4 @@
-# 📊 Análisis de Catálogo y Pricing de BMW (Europa 2026)
 
-![Python](https://shields.io)
-![Pandas](https://shields.io)
-![Plotly](https://shields.io)
-![Jupyter](https://shields.io)
 
 ## 📌 Resumen del Proyecto
 
