@@ -5,7 +5,7 @@ Este proyecto analiza el catálogo de precios de BMW en 2026 comparando mercados
 ---
 
 ### 📈 Conclusiones Clave e Impacto de Negocio
-* **Riesgo por Normativa Euro 7:** El análisis proyecta que los costes fijos de homologación (límites estrictos y tasas de partículas en frenos/neumáticos) impactarán desproporcionadamente a los modelos de acceso. Esto provocará un incremento porcentual drástico en su precio final, reduciendo el margen comercial de BMW y dificultando gravemente la fidelización y captura de nuevos clientes.
+* **Riesgo por Normativa Euro 7:** El análisis proyecta que los costes fijos de homologación (límites estrictos y tasas de partículas en frenos/neumáticos) impactarán de forma desproporcionada a los modelos de acceso. Esto provocará un incremento porcentual drástico en su precio final, reduciendo el margen comercial de BMW y dificultando gravemente la fidelización y captura de nuevos clientes.
 * **Brecha de Arbitraje Geográfico:** Se detectaron diferencias críticas de precios entre países donde el precio máximo llega a duplicar o triplicar el de origen, abriendo ventanas de oportunidad para la importación.
 * **Codependencia Global:** Los mapas de calor demuestran una correlación lineal casi perfecta (~1) entre los precios europeos a pesar de las barreras fiscales, confirmando que las estrategias se rigen por factores macroeconómicos globales unificados.
 
