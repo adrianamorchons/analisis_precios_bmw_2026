@@ -1,6 +1,6 @@
 # 🗄️ Módulo de Modelado Relacional y SQL Analítico (Euro 7 & Arbitraje)
 
-Este módulo contiene el desarrollo analítico basado en **SQL** para evaluar el impacto financiero de la normativa Euro 7 sobre el catálogo de BMW Europa 2026 y modelar las ventanas de arbitraje transfronterizo.
+Este módulo contiene el desarrollo analítico basado en **SQL** para evaluar el impacto financiero de la normativa Euro 7 sobre el catálogo de BMW Europa para el 2026 y modelar las ventanas de arbitraje transfronterizo.
 
 ## 🎯 Objetivos Estratégicos del Módulo
 *   **Validación e Ingesta:** Asegurar el control de calidad estructural de los datos extraídos de los catálogos oficiales.
@@ -20,7 +20,7 @@ El script está unificado y estructurado cronológicamente en **7 secciones oper
 | **2. Impacto Diésel (ES)** | `CAST()`, `ROUND()`, `ORDER BY DESC` | Análisis de la presión de precios en gamas de acceso en España. |
 | **3. Análisis BEV/PHEV** | `LIKE '%Puro%'`, `AVG()`, `HAVING` | Agregación del coste técnico medio en tecnologías eficientes. |
 | **4. Análisis Gama Touring** | `CASE WHEN`, `GROUP BY` | Comparativa de rendimiento comercial Diésel vs Gasolina Familiar. |
-| **5. Arbitraje Global** | `REPLACE()`, `CAST( AS NUMERIC)` | Conversión de strings locales para rankear brechas brutas. |
+| **5. Arbitraje Global** | `REPLACE()`, `CAST( AS NUMERIC)` | Conversión de strings locales para clasificar brechas brutas. |
 | **6. Caso de Estudio: PT** | `WITH (CTE)`, `STDDEV_POP()`, Puntuación Z | Aislamiento matemático del BMW X6 M como outlier extremo. |
 | **7. Caso de Estudio: CH** | Expresiones condicionales y deducción fija | Filtrado de modelos con margen neto real > 5.000€. |
 
