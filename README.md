@@ -12,7 +12,7 @@ Este proyecto analiza el catálogo de precios de BMW en 2026 comparando mercados
 ---
 
 ### 🛠️ Estructura del Proyecto y Metodología
-El proyecto se divide en módulos que cubren desde la ingesta autónoma de datos (datasets creados mediante extracción propia de las webs oficiales por país) hasta la analítica visual y financiera:
+El proyecto se divide en módulos que cubren desde la ingesta de datos (datasets creados mediante extracción propia de las webs oficiales por país) hasta la analítica visual y financiera:
 * `data/`: Contiene los conjuntos de datos limpios y unificados.
 * `notebooks/`: Código analítico (`pandas` para calidad del dato, limpieza de strings y manejo de outliers por método IQR).
 * `images/`: Gráficos interactivos generados para el soporte de decisiones.
