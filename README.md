@@ -16,6 +16,7 @@ El proyecto se divide en módulos que cubren desde la ingesta de datos (datasets
 * `data/`: Contiene los conjuntos de datos limpios y unificados.
 * `notebooks/`: Código analítico (`pandas` para calidad del dato, limpieza de strings y manejo de outliers por método IQR).
 * `images/`: Gráficos interactivos generados para el soporte de decisiones.
+* 'sql/': Script utilizado para analizar el DataFrame generado con Python. 
 
 ---
 
