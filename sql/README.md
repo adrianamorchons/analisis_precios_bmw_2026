@@ -22,7 +22,7 @@ El script está unificado y estructurado cronológicamente en **7 secciones oper
 | **4. Análisis Gama Touring** | `CASE WHEN`, `GROUP BY` | Comparativa de rendimiento comercial Diésel vs Gasolina Familiar. |
 | **5. Arbitraje Global** | `REPLACE()`, `CAST( AS NUMERIC)` | Conversión de strings locales para clasificar brechas brutas. |
 | **6. Caso de Estudio: PT** | `WITH (CTE)`, `STDDEV_POP()`, Puntuación Z | Aislamiento matemático del BMW X6 M como outlier extremo. |
-| **7. Caso de Estudio: CH** | Expresiones condicionales y deducción fija | Filtrado de modelos con margen neto real > 5.000€. |
+| **7. Caso de Estudio: CH** | Filtros lógicos booleanos y ROI porcentual | Identificación de la ventana de viabilidad diésel España ➡️ Suiza con ROI > 5%. |
 
 ---
 
@@ -33,17 +33,14 @@ A través de funciones de dispersión poblacional (`STDDEV_POP`), se determinó 
 *   **BMW X6 M (Post-Euro 7):** **291.264 €**
 *   **Distancia matemática:** Situado a **+3.57 desviaciones estándar ($\sigma$)** respecto a la media del mercado luso ($\mu$: 105.748 €), confirmando su estatus de anomalía estadística extrema.
 
-### B. Optimización de Ventanas de Margen Neto (Suiza)
-Aplicando un algoritmo de filtrado en el `WHERE` que deduce un sobrecoste técnico variable y **2.500 € de costes logísticos fijos**, el comportamiento relacional detectó asimetrías críticas:
-*   **Portugal:** La presión impositiva destruye los márgenes brutos, dejando únicamente **2 modelos** viables para el arbitraje internacional.
-*   **Suiza:** La estabilidad fiscal helvética genera **36 modelos** que conservan un **margen neto limpio superior a los 5.000 €** (liderados por el *Serie 4 Coupe 420d* con una brecha bruta de 38.831 €).
+### B. Ventana de Arbitraje de Alta Eficiencia (Caso de Éxito: Suiza)
+Mediante la ejecución de un algoritmo de filtrado en la cláusula `WHERE` que deduce el coste normativo variable de la Euro 7 en destino y **2.500 € de costes logísticos fijos**, se aisló el comportamiento real de la importación desde España a Suiza en motores diésel, arrojando una matriz de viabilidad neta:
+
+1.  **Líder Absoluto en Eficiencia de Capital:** El **BMW Serie 4 Coupé 420d** se consolida como la operación maestra del ecosistema. Presenta un **Retorno de Inversión (ROI) neto del 42,97%** y un **margen neto absoluto de 25.246 € líquidos** por unidad comercializada, impulsado por una gigantesca brecha de precio bruto inicial (95.531 € en Suiza vs 58.750 € en España) que absorbe sin dificultad los 9.035 € de castigo normativo Euro 7.
+2.  **Consistencia en Volumen Medio:** Las variantes de acceso de la Serie 3 (*318d* y *318d Touring*) demuestran una solidez financiera sobresaliente con rendimientos que superan el **22% de ROI neto** y beneficios limpios de **~11.800 €** por coche, requiriendo inversiones iniciales contenidas en origen.
+3.  **Veto Comercial y Umbral de Riesgo:** Los modelos *Serie 5 Touring 520d* (ROI: 6,07% / Margen: 4.007 €) y *Serie 2 Gran Coupé 220d* (ROI: 5,16% / Margen: 2.257 €) cierran el límite de viabilidad. Quedan catalogados como operaciones de alto riesgo, ya que el peso del coste fijo logístico y el impacto de la Euro 7 comprometen peligrosamente el beneficio ante variaciones imprevistas en la aduana helvética.
 
 ---
-
-## ⚙️ Requisitos de Ejecución
-*   **Tabla Maestra:** `analisis_precios_bmw_euro7`
-*   **Motor de Base de Datos Compatible:** PostgreSQL, MySQL o SQLite (ajustando funciones de agregación de dispersión).
-*   **IDE Recomendado:** DBeaver Community Edition.
 
 ## 🛠️ Stack Tecnológico y Entorno de Ejecución
 
@@ -51,5 +48,4 @@ Para garantizar la integridad del análisis relacional y la correcta ejecución 
 
 *   **Motor de Base de Datos:** `PostgreSQL` (Enfoque corporativo ideal para el procesamiento de funciones analíticas, agregaciones poblacionales y manejo de datos estructurados complejos).
 *   **Cliente de Gestión / IDE:** `DBeaver Community Edition` (Configurado para la administración del esquema público, ejecución de scripts secuenciales y validación de tipos de datos en la cuadrícula de resultados).
-*   **Compatibilidad de Sintaxis:** El script hace uso de comillas dobles (`"Columna"`) para respetar estrictamente el *case-sensitivity* (mayúsculas y minúsculas) de la estructura del dataset original importado desde Excel/CSV.
-
+*   **Compatibilidad de Sintaxis:** El script hace uso de comillas dobles (`"Columna"`) para respetar estrictamente el *case-sensitivity* (mayúsculas y minúsculas) de la estructura del dataset original importado desde Excel/CSV y resolver de forma estricta las agregaciones en bloques condicionales mediante agrupaciones robustas en el `GROUP BY`.
