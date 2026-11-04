@@ -110,13 +110,6 @@ WHERE apbe."Modelo" LIKE '%Touring%'
   AND apbe."Tecnologia" NOT LIKE '%Enchufable%'    
 GROUP BY 1;
     
- -- Impacto de la normativa Euro7 en híbridos 
-
-FROM "analisis_precios_bmw_euro7" apbe
-WHERE apbe."Modelo" LIKE '%Touring%'               -- Aseguramos que solo examine la gama familiar
-  AND apbe."Tecnologia" NOT LIKE '%Puro%'          -- Excluimos los eléctricos puros (gama i5 Touring)
-  AND apbe."Tecnologia" NOT LIKE '%Enchufable%'    -- Excluimos los híbridos (gama 330e/530e) para aislar combustión pura
-GROUP BY 1; -- Agrupa basándose en la primera columna calculada (el CASE WHEN)
 
 -- Análisis de impacto de la normativa Euro 7 en vehículos Híbridos (PHEV)
 SELECT 
@@ -387,59 +380,267 @@ SELECT
 FROM "analisis_precios_bmw_euro7" p, estadisticos e
 WHERE p."Modelo" LIKE 'X6 M %' OR p."Modelo" = 'X6 M';
 
--- Filtrar aquellos modelos que conserven un margen neto superior a 5000€
+-- COMPARATIVA DE MARGENES NETOS: PORTUGAL VS SUIZA (POST-EURO 7)
+-- Aplica costes logísticos fijos (2500€) y evalúa rentabilidad mayor a 5000€ en cualquiera de los destinos
 SELECT 
     "Modelo" AS modelo_vehiculo,
     "Tecnologia" AS tipo_motor,
     "Pais_Min" AS mercado_compra,
     "Min_Precio_EUR" AS precio_compra_eur,
+    
+    -- DATOS PORTUGAL
     "Portugal" AS precio_venta_pt_original,
-    "PVP_Euro7_Portugal" AS precio_venta_pt_euro7,
-    -- 1. Margen Bruto de Arbitraje original hacia Portugal
-    ("Portugal" - "Min_Precio_EUR") AS margen_bruto_eur,
-    -- 2. Incremento real del precio por la Euro 7 en Portugal
-    ("PVP_Euro7_Portugal" - "Portugal") AS sobrecoste_euro7_pt,
-    -- 3. CÁLCULO DEL MARGEN NETO POST-EURO 7 
-    -- Fórmula: Margen Bruto - Coste Euro 7 - 2500€ de Gastos Logísticos Fijos
-    (("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) AS margen_neto_pt_eur
+    (("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) AS margen_neto_pt_eur,
+    
+    -- DATOS SUIZA
+    "Suiza_Euro" AS precio_venta_ch_original,
+    (("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) AS margen_neto_ch_eur,
+    
+    -- ANÁLISIS DE DECISIÓN: ¿Cuál mercado deja más margen neto?
+    CASE 
+        WHEN (("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) > 
+             (("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) THEN 'Portugal'
+        ELSE 'Suiza'
+    END AS destino_mas_rentable
 FROM "analisis_precios_bmw_euro7"
 WHERE "Portugal" IS NOT NULL 
   AND "PVP_Euro7_Portugal" IS NOT NULL
-  -- Filtramos estrictamente los modelos que conservan más de 5.000€ de margen neto
-  AND (("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) > 5000
-ORDER BY margen_neto_pt_eur DESC;
+  AND "Suiza_Euro" IS NOT NULL 
+  AND "PVP_Euro7_Suiza" IS NOT NULL
+  -- Filtramos si al menos uno de los dos países supera el umbral de los 5.000€ de beneficio neto
+  AND (
+      (("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) > 5000
+      OR 
+      (("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) > 5000
+  )
+-- En PostgreSQL podemos ordenar directamente usando la operación aritmética del mayor margen estimado
+ORDER BY GREATEST(
+    (("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500),
+    (("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500)
+) DESC;
 
--- Al cruzarlo con el mercado suizo:
--- Modelos que son rentables comprando en el mercado más barato de Europa e importando hacia Suiza
--- Margen neto: >5000€
--- Coste fijo de logística: 2500€ 
+-- Porcentaje neto de rentabilidad
+-- Se calcula el margen neto y se divide entre el precio de compra en mercado de origen *100
+-- Incluye el rendimiento máximo alcanzable 
 
+-- COMPARATIVA DE MÁRGENES Y PORCENTAJES DE RENTABILIDAD NETAS (POST-EURO 7)
 SELECT 
     "Modelo" AS modelo_vehiculo,
     "Tecnologia" AS tipo_motor,
     "Pais_Min" AS mercado_compra,
     "Min_Precio_EUR" AS precio_compra_eur,
-    "Suiza_Euro" AS precio_venta_ch_original,
-    "PVP_Euro7_Suiza" AS precio_venta_ch_euro7,
-    -- 1. Margen Bruto de Arbitraje original hacia Suiza
-    ("Suiza_Euro" - "Min_Precio_EUR") AS margen_bruto_eur,
-    -- 2. Incremento real del precio por la Euro 7 en Suiza
-    ("PVP_Euro7_Suiza" - "Suiza_Euro") AS sobrecoste_euro7_ch,
-    -- 3. CÁLCULO DEL MARGEN NETO POST-EURO 7 EN SUIZA
-    -- Fórmula: Margen Bruto - Coste Euro 7 - 2500€ de Gastos Logísticos Fijos
-    (("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) AS margen_neto_ch_eur
+    
+    -- PORTUGAL: Margen absoluto y Porcentaje de rentabilidad neta
+    (("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) AS margen_neto_pt_eur,
+    ROUND(
+        (CAST((("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) AS NUMERIC) 
+        / "Min_Precio_EUR") * 100, 
+        2
+    ) AS rentabilidad_neta_pt_porc,
+    
+    -- SUIZA: Margen absoluto y Porcentaje de rentabilidad neta
+    (("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) AS margen_neto_ch_eur,
+    ROUND(
+        (CAST((("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) AS NUMERIC) 
+        / "Min_Precio_EUR") * 100, 
+        2
+    ) AS rentabilidad_neta_ch_porc,
+    
+    -- ANÁLISIS DE DECISIÓN: Mercado óptimo y rentabilidad máxima esperada
+    CASE 
+        WHEN (("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) > 
+             (("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) THEN 'Portugal'
+        ELSE 'Suiza'
+    END AS destino_mas_rentable,
+    
+    GREATEST(
+        ROUND((CAST((("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) AS NUMERIC) / "Min_Precio_EUR") * 100, 2),
+        ROUND((CAST((("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) AS NUMERIC) / "Min_Precio_EUR") * 100, 2)
+    ) AS max_rentabilidad_porc
+
 FROM "analisis_precios_bmw_euro7"
-WHERE "Suiza_Euro" IS NOT NULL 
+WHERE "Portugal" IS NOT NULL 
+  AND "PVP_Euro7_Portugal" IS NOT NULL
+  AND "Suiza_Euro" IS NOT NULL 
   AND "PVP_Euro7_Suiza" IS NOT NULL
-  -- Filtramos estrictamente los modelos que conservan más de 5.000€ de margen neto en Suiza
-  AND (("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) > 5000
-ORDER BY margen_neto_ch_eur DESC;
+  -- Filtro de viabilidad comercial (mantiene modelos con margen positivo en algún destino)
+  AND (
+      (("Portugal" - "Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) > 5000
+      OR 
+      (("Suiza_Euro" - "Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) > 5000
+  )
+-- Ordenamos de mayor a menor rentabilidad porcentual máxima
+ORDER BY max_rentabilidad_porc DESC;
+
+-- Visión de retorno de inversión (ROI). Al calcular el porcentaje sobre el coste "min_precio_eur"
+-- vemos que el X5 M (Con casi 14000€ de margen) es más eficiente en términos de capital
+-- que otros modelos que requieren menos inversión inicial 
+
+-- Rentabilidad de los modelos de la división M (Independientemente del país)
+-- objetivo: evaluar el rendimiento en todos los mercados de destino disponibles
+-- Margen promedio en euros y porcentaje de rentabilidad promedio para cada modelo M 
+
+-- COMPARATIVA DE RENDIMIENTO ECONÓMICO PROMEDIO DE LA DIVISIÓN M (POST-EURO 7) - CORREGIDA
+SELECT 
+    apbe."Modelo" AS modelo_m,
+    apbe."Tecnologia" AS tipo_motor,
+    apbe."Pais_Min" AS mercado_origen_compra,
+    apbe."Min_Precio_EUR" AS coste_capital_compra_eur,
+    
+    -- 1. Promedio de los márgenes netos estimados en los tres mercados destino principales
+    ROUND(AVG(
+        (
+            ((apbe."España" - apbe."Min_Precio_EUR") - ("PVP_Euro7_España" - apbe."España") - 2500) +
+            ((apbe."Portugal" - apbe."Min_Precio_EUR") - ("PVP_Euro7_Portugal" - apbe."Portugal") - 2500) +
+            ((apbe."Suiza_Euro" - apbe."Min_Precio_EUR") - ("PVP_Euro7_Suiza" - apbe."Suiza_Euro") - 2500)
+        ) / 3
+    ), 2) AS margen_neto_promedio_eur,
+
+    -- 2. Rendimiento de Capital Promedio (ROI % medio sobre la inversión inicial de compra)
+    ROUND(AVG(
+        CAST(
+            (
+                ((apbe."España" - apbe."Min_Precio_EUR") - ("PVP_Euro7_España" - apbe."España") - 2500) +
+                ((apbe."Portugal" - apbe."Min_Precio_EUR") - ("PVP_Euro7_Portugal" - apbe."Portugal") - 2500) +
+                ((apbe."Suiza_Euro" - apbe."Min_Precio_EUR") - ("PVP_Euro7_Suiza" - apbe."Suiza_Euro") - 2500)
+            ) / 3 AS NUMERIC) 
+        / apbe."Min_Precio_EUR" * 100
+    ), 2) AS roi_promedio_porcentaje,
+
+    -- 3. Identificación del canal individual más rentable para el modelo
+    CASE 
+        WHEN (("Portugal" - apbe."Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) >= 
+             (("Suiza_Euro" - apbe."Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) 
+             AND (("Portugal" - apbe."Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) >=
+                 (("España" - apbe."Min_Precio_EUR") - ("PVP_Euro7_España" - apbe."España") - 2500) THEN 'Portugal'
+        WHEN (("Suiza_Euro" - apbe."Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) >= 
+             (("Portugal" - apbe."Min_Precio_EUR") - ("PVP_Euro7_Portugal" - "Portugal") - 2500) 
+             AND (("Suiza_Euro" - apbe."Min_Precio_EUR") - ("PVP_Euro7_Suiza" - "Suiza_Euro") - 2500) >=
+                 (("España" - apbe."Min_Precio_EUR") - ("PVP_Euro7_España" - apbe."España") - 2500) THEN 'Suiza'
+        ELSE 'España'
+    END AS canal_destino_optimo
+
+FROM "analisis_precios_bmw_euro7" apbe
+WHERE (apbe."Modelo" LIKE '% M%' OR apbe."Modelo" LIKE 'M%') 
+  AND apbe."Portugal" IS NOT NULL 
+  AND apbe."Suiza_Euro" IS NOT NULL
+GROUP BY 
+    apbe."Modelo", 
+    apbe."Tecnologia", 
+    apbe."Pais_Min", 
+    apbe."Min_Precio_EUR",
+    apbe."España",
+    apbe."Portugal",
+    apbe."Suiza_Euro",
+    apbe."PVP_Euro7_España",
+    apbe."PVP_Euro7_Portugal",
+    apbe."PVP_Euro7_Suiza"
+ORDER BY roi_promedio_porcentaje DESC;
+
+-- Conclusiones:
+-- X6 xDrive 40i MSport no es un "M" puro, pero su coste de compra en Italia (97800€)
+-- frente a su precio final lo convierte en el modelo con mejor ROI promedio (2.25%) y un margen de 2197€
+
+-- "M" puros como M3 Touring, M4 Cabrio, M2 o X6 M resisten pero al límite. El arbitraje en estos casos
+-- se vuelve muy estrecho. Modelos como el M4 Cabrio y el M3 Touring retienen una rentabilidadd
+-- muy baja (1.47% y 0.81% respectivamente). Al aplicar la Euro7, el margen bruto de importación desaparece. 
+
+-- Zona roja: a partir del X5 M se dan pérdidas de margen (hasta 9450€ en un Serie 4 Cabrio M440i).
+-- Euro7 destruye completamente el modelo de arbitraje para deportivos medianos y de acceso, 
+-- pues el precio final en destino supera la brecha de precios original entre mercados 
+-------------------------------------------------------------------------------
+
+-- Escenario: un comprador suizo que busca adquirir un modelo diésel en el mercado español
+-- Porcentaje de rentabilidad neta superior al 5% (tras absorber coste de normativa Euro7)
+-- para ello se aplica un filtro analítico en la clausula WHERE o HAVING
+
+-- MODELOS DIÉSEL VIABLES PARA IMPORTACIÓN A SUIZA DESDE ESPAÑA (RENTABILIDAD > 5%)
+SELECT 
+    apbe."Modelo" AS modelo_vehiculo,
+    apbe."Segmento_Espacio" AS segmento,
+    apbe."España" AS precio_compra_es,
+    apbe."Suiza_Euro" AS precio_venta_ch_original,
+    
+    -- 1. Coste extra que impondrá la Euro 7 en el mercado de destino (Suiza)
+    ("PVP_Euro7_Suiza" - "Suiza_Euro") AS coste_extra_euro7_ch,
+    
+    -- 2. Cálculo del Margen Neto Real en Euros
+    -- Fórmula: (Precio Venta Suiza - Precio Compra España) - Coste Euro 7 Suiza - Gastos Logísticos Fijos
+    (
+        ("Suiza_Euro" - apbe."España") 
+        - ("PVP_Euro7_Suiza" - "Suiza_Euro") 
+        - 2500
+    ) AS margen_neto_real_eur,
+    
+    -- 3. Porcentaje de Rentabilidad Neta (ROI) sobre el Capital Invertido (Precio de Compra en España)
+    ROUND(
+        (CAST(
+            (
+                ("Suiza_Euro" - apbe."España") 
+                - ("PVP_Euro7_Suiza" - "Suiza_Euro") 
+                - 2500
+            ) AS NUMERIC) 
+        / apbe."España") * 100, 
+        2
+    ) AS porcentaje_rentabilidad_neta
+
+FROM "analisis_precios_bmw_euro7" apbe
+WHERE 
+    -- Filtro exclusivo para motores diésel de combustión
+    ("Modelo" LIKE '%d %' OR "Modelo" LIKE '%d')
+    AND "Modelo" NOT LIKE '%eDrive%'
+    -- Asegurar consistencia de datos en los países analizados
+    AND apbe."España" IS NOT NULL 
+    AND apbe."Suiza_Euro" IS NOT NULL
+    AND "PVP_Euro7_Suiza" IS NOT NULL
+    -- FILTRO CLAVE: Solo operaciones con ROI neto superior al 5%
+    AND (
+        (CAST(
+            (
+                ("Suiza_Euro" - apbe."España") 
+                - ("PVP_Euro7_Suiza" - "Suiza_Euro") 
+                - 2500
+            ) AS NUMERIC) 
+        / apbe."España") * 100
+    ) > 5.00
+ORDER BY porcentaje_rentabilidad_neta DESC;
+
+-- el Serie 4 Coupe 420d se muestra como líder absoluto de rentabilidad con un 42.97%
+-- Le siguen de cerca las berlinas de acceso de la Serie 3
+-- ¿Cuál es el margen neto absoluto en euros que deja este 42.97%?
+
+-- ANÁLISIS DE MARGEN ABSOLUTO PARA EL LÍDER DE RENTABILIDAD (SERIE 4 COUPÉ 420d)
+SELECT 
+    apbe."Modelo" AS modelo_vehiculo,
+    apbe."España" AS precio_compra_españa_eur,
+    apbe."Suiza_Euro" AS precio_venta_suiza_eur,
+    ("PVP_Euro7_Suiza" - "Suiza_Euro") AS coste_extra_euro7_suiza_eur,
+    2500 AS gastos_logisticos_fijos_eur,
+    
+    -- Beneficio Neto Absoluto en Euros líquidos
+    (
+        ("Suiza_Euro" - apbe."España") 
+        - ("PVP_Euro7_Suiza" - "Suiza_Euro") 
+        - 2500
+    ) AS margen_neto_absoluto_eur,
+    
+    -- Tu porcentaje ya validado
+    ROUND(
+        (CAST(
+            (
+                ("Suiza_Euro" - apbe."España") 
+                - ("PVP_Euro7_Suiza" - "Suiza_Euro") 
+                - 2500
+            ) AS NUMERIC) 
+        / apbe."España") * 100, 
+        2
+    ) AS porcentaje_rentabilidad_neta
+
+FROM "analisis_precios_bmw_euro7" apbe
+WHERE apbe."Modelo" LIKE 'Serie 4 coupe 420d%';
 
 
 
- 
 
 
 
-
- 
