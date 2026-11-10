@@ -639,6 +639,57 @@ SELECT
 FROM "analisis_precios_bmw_euro7" apbe
 WHERE apbe."Modelo" LIKE 'Serie 4 coupe 420d%';
 
+-- UNPIVOT / CROSS JOIN LATERAL 
+-- Tener una gila por cada combinación de modelo, país y precio base 
+SELECT 
+    apbe."Modelo",
+    apbe."Tecnologia",
+    apbe."categoria_carroceria",
+    p.pais,
+    p.precio_base,
+    p.precio_euro7,
+    (p.precio_euro7 - p.precio_base) AS coste_extra_euro7
+FROM "analisis_precios_bmw_euro7" apbe
+CROSS JOIN LATERAL (
+    VALUES 
+        ('España',    apbe."España",    apbe."PVP_Euro7_España"),
+        ('Alemania',  apbe."Alemania",  apbe."PVP_Euro7_Alemania"),
+        ('Francia',   apbe."Francia",   apbe."PVP_Euro7_Francia"),
+        ('Portugal',  apbe."Portugal",  apbe."PVP_Euro7_Portugal"),
+        ('Suiza',     apbe."Suiza_Euro", apbe."PVP_Euro7_Suiza")
+) AS p(pais, precio_base, precio_euro7)
+WHERE p.precio_base IS NOT NULL;
+
+-- Qué obtenemos con esta consulta:
+-- Los países ya no son columnas separadas, y permite introducir toda la consulta en una CTE para calcular promedios 
+
+-- Ejemplo: conocer coste medio extra de la Euro7 y precio base promedio por país 
+WITH datos_normalizados AS (
+    SELECT 
+        apbe."Modelo",
+        p.pais,
+        p.precio_base,
+        p.precio_euro7
+    FROM "analisis_precios_bmw_euro7" apbe
+    CROSS JOIN LATERAL (
+        VALUES 
+            ('España',    apbe."España",    apbe."PVP_Euro7_España"),
+            ('Alemania',  apbe."Alemania",  apbe."PVP_Euro7_Alemania"),
+            ('Francia',   apbe."Francia",   apbe."PVP_Euro7_Francia"),
+            ('Portugal',  apbe."Portugal",  apbe."PVP_Euro7_Portugal"),
+            ('Suiza',     apbe."Suiza_Euro", apbe."PVP_Euro7_Suiza")
+    ) AS p(pais, precio_base, precio_euro7)
+    WHERE p.precio_base IS NOT NULL
+)
+SELECT 
+    pais,
+    ROUND(AVG(precio_base), 2) AS precio_base_promedio,
+    ROUND(AVG(precio_euro7 - precio_base), 2) AS impacto_medio_euro7,
+    COUNT(*) AS modelos_disponibles
+FROM datos_normalizados
+GROUP BY pais
+ORDER BY precio_base_promedio DESC;
+
 
 
 
