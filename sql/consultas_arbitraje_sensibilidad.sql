@@ -690,6 +690,44 @@ FROM datos_normalizados
 GROUP BY pais
 ORDER BY precio_base_promedio DESC;
 
+-- Gráfico de barras 
+-- texto plano 
+
+-- Ejecuta esto para ver un gráfico de barras textual inmediato
+WITH datos_normalizados AS (
+    SELECT 
+        apbe."Modelo",
+        p.pais,
+        p.precio_base,
+        p.precio_euro7
+    FROM "analisis_precios_bmw_euro7" apbe
+    CROSS JOIN LATERAL (
+        VALUES 
+            ('España',    apbe."España",    apbe."PVP_Euro7_España"),
+            ('Alemania',  apbe."Alemania",  apbe."PVP_Euro7_Alemania"),
+            ('Francia',   apbe."Francia",   apbe."PVP_Euro7_Francia"),
+            ('Portugal',  apbe."Portugal",  apbe."PVP_Euro7_Portugal"),
+            ('Suiza',     apbe."Suiza_Euro", apbe."PVP_Euro7_Suiza")
+    ) AS p(pais, precio_base, precio_euro7)
+    WHERE p.precio_base IS NOT NULL
+),
+resumen AS (
+    SELECT 
+        pais,
+        ROUND(AVG(precio_euro7 - precio_base), 2) AS impacto_medio_euro7
+    FROM datos_normalizados
+    GROUP BY pais
+)
+SELECT 
+    pais,
+    impacto_medio_euro7,
+    -- Creamos una barra visual repitiendo el caracter '█' 
+    -- Dividimos entre 20 para ajustar la escala del gráfico al ancho de la pantalla
+    REPEAT('█', CAST(impacto_medio_euro7 / 20 AS INT)) AS grafico_barras
+FROM resumen
+ORDER BY impacto_medio_euro7 DESC;
+ 
+
 
 
 
