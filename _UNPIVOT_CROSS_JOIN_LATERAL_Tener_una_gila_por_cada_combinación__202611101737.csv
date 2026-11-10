@@ -1,0 +1,391 @@
+"Modelo","Tecnologia","categoria_carroceria","pais","precio_base","precio_euro7","coste_extra_euro7"
+Serie 1  116i,Combustión Tradicional (ICE),Berlina,España,35150,43500,8350
+Serie 1  116i,Combustión Tradicional (ICE),Berlina,Alemania,34250,41710,7460
+Serie 1  116i,Combustión Tradicional (ICE),Berlina,Francia,36200,44400,8200
+Serie 1  116i,Combustión Tradicional (ICE),Berlina,Portugal,35200,44280,9080
+Serie 1  116i,Combustión Tradicional (ICE),Berlina,Suiza,44361,48819,4458
+Serie 1  118d,Combustión Tradicional (ICE),Berlina,España,40250,49670,9420
+Serie 1  118d,Combustión Tradicional (ICE),Berlina,Alemania,39350,47778,8428
+Serie 1  118d,Combustión Tradicional (ICE),Berlina,Francia,38900,47640,8740
+Serie 1  118d,Combustión Tradicional (ICE),Berlina,Portugal,41650,52214,10564
+Serie 1  118d,Combustión Tradicional (ICE),Berlina,Suiza,50319,55260,4941
+Serie 2 Coupe  218i,Combustión Tradicional (ICE),Berlina,España,50300,61831,11531
+Serie 2 Coupe  218i,Combustión Tradicional (ICE),Berlina,Alemania,46300,56049,9749
+Serie 2 Coupe  218i,Combustión Tradicional (ICE),Berlina,Francia,60925,74070,13145
+Serie 2 Coupe  218i,Combustión Tradicional (ICE),Berlina,Portugal,50450,63038,12588
+Serie 2 Coupe  218i,Combustión Tradicional (ICE),Berlina,Suiza,61914,67794,5880
+Serie 2 coupe  220d,Combustión Tradicional (ICE),Berlina,España,56500,69333,12833
+Serie 2 coupe  220d,Combustión Tradicional (ICE),Berlina,Alemania,53400,64498,11098
+Serie 2 coupe  220d,Combustión Tradicional (ICE),Berlina,Francia,61540,74808,13268
+Serie 2 coupe  220d,Combustión Tradicional (ICE),Berlina,Portugal,59450,74108,14658
+Serie 2 coupe  220d,Combustión Tradicional (ICE),Berlina,Suiza,65106,71244,6138
+Serie 2 Gran Coupe 218i,Combustión Tradicional (ICE),Berlina,España,38650,47734,9084
+Serie 2 Gran Coupe 218i,Combustión Tradicional (ICE),Berlina,Alemania,37750,45874,8124
+Serie 2 Gran Coupe 218i,Combustión Tradicional (ICE),Berlina,Francia,50250,61260,11010
+Serie 2 Gran Coupe 218i,Combustión Tradicional (ICE),Berlina,Portugal,38700,48585,9885
+Serie 2 Gran Coupe 218i,Combustión Tradicional (ICE),Berlina,Suiza,47765,52499,4734
+Serie 2 Gran Coupe  220d,Combustión Tradicional (ICE),Berlina,España,43750,53906,10156
+Serie 2 Gran Coupe  220d,Combustión Tradicional (ICE),Berlina,Alemania,42850,51944,9094
+Serie 2 Gran Coupe  220d,Combustión Tradicional (ICE),Berlina,Francia,52380,63816,11436
+Serie 2 Gran Coupe  220d,Combustión Tradicional (ICE),Berlina,Portugal,45150,56518,11368
+Serie 2 Gran Coupe  220d,Combustión Tradicional (ICE),Berlina,Suiza,53723,58939,5216
+Serie 4 coupe 420i,Combustión Tradicional (ICE),Berlina,España,56950,70362,13412
+Serie 4 coupe 420i,Combustión Tradicional (ICE),Berlina,Alemania,53900,65569,11669
+Serie 4 coupe 420i,Combustión Tradicional (ICE),Berlina,Francia,60900,74520,13620
+Serie 4 coupe 420i,Combustión Tradicional (ICE),Berlina,Portugal,57350,72016,14666
+Serie 4 coupe 420i,Combustión Tradicional (ICE),Berlina,Suiza,67553,74322,6769
+Serie 4 coupe 420d,Combustión Tradicional (ICE),Berlina,España,58750,72540,13790
+Serie 4 coupe 420d,Combustión Tradicional (ICE),Berlina,Alemania,56700,68901,12201
+Serie 4 coupe 420d,Combustión Tradicional (ICE),Berlina,Francia,61540,75288,13748
+Serie 4 coupe 420d,Combustión Tradicional (ICE),Berlina,Portugal,61050,76568,15518
+Serie 4 coupe 420d,Combustión Tradicional (ICE),Berlina,Suiza,95531,104566,9035
+Serie 4 Gran Coupe 420i,Combustión Tradicional (ICE),Berlina,España,57050,70482,13432
+Serie 4 Gran Coupe 420i,Combustión Tradicional (ICE),Berlina,Alemania,53900,65569,11669
+Serie 4 Gran Coupe 420i,Combustión Tradicional (ICE),Berlina,Francia,55600,68160,12560
+Serie 4 Gran Coupe 420i,Combustión Tradicional (ICE),Berlina,Portugal,57450,72140,14690
+Serie 4 Gran Coupe 420i,Combustión Tradicional (ICE),Berlina,Suiza,69361,76276,6915
+Serie 4 Gran Coupe 420d,Combustión Tradicional (ICE),Berlina,España,58850,72660,13810
+Serie 4 Gran Coupe 420d,Combustión Tradicional (ICE),Berlina,Alemania,56800,69020,12220
+Serie 4 Gran Coupe 420d,Combustión Tradicional (ICE),Berlina,Francia,68000,83040,15040
+Serie 4 Gran Coupe 420d,Combustión Tradicional (ICE),Berlina,Portugal,61150,76690,15540
+Serie 4 Gran Coupe 420d,Combustión Tradicional (ICE),Berlina,Suiza,82234,90192,7958
+Serie 3 320i,Combustión Tradicional (ICE),Berlina,España,51150,63344,12194
+Serie 3 320i,Combustión Tradicional (ICE),Berlina,Alemania,47000,57358,10358
+Serie 3 320i,Combustión Tradicional (ICE),Berlina,Francia,58190,71268,13078
+Serie 3 320i,Combustión Tradicional (ICE),Berlina,Portugal,50550,63652,13102
+Serie 3 320i,Combustión Tradicional (ICE),Berlina,Suiza,68936,75817,6881
+Serie 3 318d,Combustión Tradicional (ICE),Berlina,España,50200,62194,11994
+Serie 3 318d,Combustión Tradicional (ICE),Berlina,Alemania,51500,62713,11213
+Serie 3 318d,Combustión Tradicional (ICE),Berlina,Francia,62660,76632,13972
+Serie 3 318d,Combustión Tradicional (ICE),Berlina,Portugal,57950,72754,14804
+Serie 3 318d,Combustión Tradicional (ICE),Berlina,Suiza,71702,78807,7105
+Serie 5 520i,Combustión Tradicional (ICE),Berlina,España,63550,78348,14798
+Serie 5 520i,Combustión Tradicional (ICE),Berlina,Alemania,60000,72828,12828
+Serie 5 520i,Combustión Tradicional (ICE),Berlina,Francia,61500,75240,13740
+Serie 5 520i,Combustión Tradicional (ICE),Berlina,Portugal,65200,81672,16472
+Serie 5 520i,Combustión Tradicional (ICE),Berlina,Suiza,74787,82142,7355
+Serie 5 520d,Combustión Tradicional (ICE),Berlina,España,63450,77742,14292
+Serie 5 520d,Combustión Tradicional (ICE),Berlina,Alemania,62300,75089,12789
+Serie 5 520d,Combustión Tradicional (ICE),Berlina,Francia,63800,77520,13720
+Serie 5 520d,Combustión Tradicional (ICE),Berlina,Portugal,68450,85178,16728
+Serie 5 520d,Combustión Tradicional (ICE),Berlina,Suiza,77234,84355,7121
+Serie 7 730i,Combustión Tradicional (ICE),Berlina,España,125000,152702,27702
+Serie 7 730i,Combustión Tradicional (ICE),Berlina,Alemania,124000,148988,24988
+Serie 7 730i,Combustión Tradicional (ICE),Berlina,Francia,128000,155040,27040
+Serie 7 730i,Combustión Tradicional (ICE),Berlina,Portugal,115000,142926,27926
+Serie 7 730i,Combustión Tradicional (ICE),Berlina,Suiza,158510,172647,14137
+Serie 7 740d,Combustión Tradicional (ICE),Berlina,España,124200,151734,27534
+Serie 7 740d,Combustión Tradicional (ICE),Berlina,Alemania,119900,144109,24209
+Serie 7 740d,Combustión Tradicional (ICE),Berlina,Francia,120000,145440,25440
+Serie 7 740d,Combustión Tradicional (ICE),Berlina,Portugal,142450,176690,34240
+Serie 7 740d,Combustión Tradicional (ICE),Berlina,Suiza,127659,139297,11638
+Serie 2 Active Tourer 218i,Combustión Tradicional (ICE),Berlina,España,42550,52454,9904
+Serie 2 Active Tourer 218i,Combustión Tradicional (ICE),Berlina,Alemania,38750,47064,8314
+Serie 2 Active Tourer 218i,Combustión Tradicional (ICE),Berlina,Francia,45000,54960,9960
+Serie 2 Active Tourer 218i,Combustión Tradicional (ICE),Berlina,Portugal,37800,47478,9678
+Serie 2 Active Tourer 218i,Combustión Tradicional (ICE),Berlina,Suiza,50106,55029,4923
+Serie 2 active Tourer 218d,Combustión Tradicional (ICE),Berlina,España,44850,55720,10870
+Serie 2 active Tourer 218d,Combustión Tradicional (ICE),Berlina,Alemania,42450,51944,9494
+Serie 2 active Tourer 218d,Combustión Tradicional (ICE),Berlina,Francia,48300,59400,11100
+Serie 2 active Tourer 218d,Combustión Tradicional (ICE),Berlina,Portugal,47400,59778,12378
+Serie 2 active Tourer 218d,Combustión Tradicional (ICE),Berlina,Suiza,53191,58797,5606
+Serie 3 Touring 320i,Combustión Tradicional (ICE),Berlina,España,53150,65764,12614
+Serie 3 Touring 320i,Combustión Tradicional (ICE),Berlina,Alemania,48300,58905,10605
+Serie 3 Touring 320i,Combustión Tradicional (ICE),Berlina,Francia,49600,60960,11360
+Serie 3 Touring 320i,Combustión Tradicional (ICE),Berlina,Portugal,51850,65252,13402
+Serie 3 Touring 320i,Combustión Tradicional (ICE),Berlina,Suiza,66808,73517,6709
+Serie 3 M340d xDrive,Combustión Tradicional (ICE),Berlina,España,84500,104423,19923
+Serie 3 M340d xDrive,Combustión Tradicional (ICE),Berlina,Alemania,77500,94367,16867
+Serie 3 M340d xDrive,Combustión Tradicional (ICE),Berlina,Francia,80150,98340,18190
+Serie 3 M340d xDrive,Combustión Tradicional (ICE),Berlina,Portugal,93450,117158,23708
+Serie 3 M340d xDrive,Combustión Tradicional (ICE),Berlina,Suiza,94255,103835,9580
+Serie 3 Touring 318d,Combustión Tradicional (ICE),Berlina,España,52200,64614,12414
+Serie 3 Touring 318d,Combustión Tradicional (ICE),Berlina,Alemania,52800,64260,11460
+Serie 3 Touring 318d,Combustión Tradicional (ICE),Berlina,Francia,54650,67020,12370
+Serie 3 Touring 318d,Combustión Tradicional (ICE),Berlina,Portugal,59250,74354,15104
+Serie 3 Touring 318d,Combustión Tradicional (ICE),Berlina,Suiza,73723,80992,7269
+Serie 5 Touring 520i,Combustión Tradicional (ICE),Berlina,España,66150,81494,15344
+Serie 5 Touring 520i,Combustión Tradicional (ICE),Berlina,Alemania,62000,75208,13208
+Serie 5 Touring 520i,Combustión Tradicional (ICE),Berlina,Francia,64000,78240,14240
+Serie 5 Touring 520i,Combustión Tradicional (ICE),Berlina,Portugal,67200,84132,16932
+Serie 5 Touring 520i,Combustión Tradicional (ICE),Berlina,Suiza,77446,85016,7570
+Serie 5 Touring 520d,Combustión Tradicional (ICE),Berlina,España,66050,80888,14838
+Serie 5 Touring 520d,Combustión Tradicional (ICE),Berlina,Alemania,64300,77469,13169
+Serie 5 Touring 520d,Combustión Tradicional (ICE),Berlina,Francia,65800,79920,14120
+Serie 5 Touring 520d,Combustión Tradicional (ICE),Berlina,Portugal,70450,87638,17188
+Serie 5 Touring 520d,Combustión Tradicional (ICE),Berlina,Suiza,79893,87229,7336
+X1 sDrive 20i,Combustión Tradicional (ICE),SUV,España,48300,60621,12321
+X1 sDrive 20i,Combustión Tradicional (ICE),SUV,Alemania,45100,55811,10711
+X1 sDrive 20i,Combustión Tradicional (ICE),SUV,Francia,46400,57840,11440
+X1 sDrive 20i,Combustión Tradicional (ICE),SUV,Portugal,58100,73677,15577
+X1 sDrive 20i,Combustión Tradicional (ICE),SUV,Suiza,57127,63700,6573
+X1 sDrive 20d,Combustión Tradicional (ICE),SUV,España,46850,58866,12016
+X1 sDrive 20d,Combustión Tradicional (ICE),SUV,Alemania,47700,58905,11205
+X1 sDrive 20d,Combustión Tradicional (ICE),SUV,Francia,48700,60600,11900
+X1 sDrive 20d,Combustión Tradicional (ICE),SUV,Portugal,54150,68818,14668
+X1 sDrive 20d,Combustión Tradicional (ICE),SUV,Suiza,61595,68530,6935
+X2 sDrive 20i,Combustión Tradicional (ICE),SUV,España,49800,62436,12636
+X2 sDrive 20i,Combustión Tradicional (ICE),SUV,Alemania,48600,59976,11376
+X2 sDrive 20i,Combustión Tradicional (ICE),SUV,Francia,49950,62100,12150
+X2 sDrive 20i,Combustión Tradicional (ICE),SUV,Portugal,48600,61992,13392
+X2 sDrive 20i,Combustión Tradicional (ICE),SUV,Suiza,59042,65770,6728
+X2 sDrive 18d,Combustión Tradicional (ICE),SUV,España,48350,60682,12332
+X2 sDrive 18d,Combustión Tradicional (ICE),SUV,Alemania,49200,60690,11490
+X2 sDrive 18d,Combustión Tradicional (ICE),SUV,Francia,51200,63600,12400
+X2 sDrive 18d,Combustión Tradicional (ICE),SUV,Portugal,55100,69987,14887
+X2 sDrive 18d,Combustión Tradicional (ICE),SUV,Suiza,63510,70600,7090
+X3 xDrive 20i,Combustión Tradicional (ICE),SUV,España,65050,80888,15838
+X3 xDrive 20i,Combustión Tradicional (ICE),SUV,Alemania,60300,73899,13599
+X3 xDrive 20i,Combustión Tradicional (ICE),SUV,Francia,61250,75660,14410
+X3 xDrive 20i,Combustión Tradicional (ICE),SUV,Portugal,79500,99999,20499
+X3 xDrive 20i,Combustión Tradicional (ICE),SUV,Suiza,74042,81985,7943
+X3 xDrive 20d,Combustión Tradicional (ICE),SUV,España,66900,83127,16227
+X3 xDrive 20d,Combustión Tradicional (ICE),SUV,Alemania,62800,76874,14074
+X3 xDrive 20d,Combustión Tradicional (ICE),SUV,Francia,63500,78360,14860
+X3 xDrive 20d,Combustión Tradicional (ICE),SUV,Portugal,82000,103074,21074
+X3 xDrive 20d,Combustión Tradicional (ICE),SUV,Suiza,77021,85206,8185
+X5 xDrive 40i,Combustión Tradicional (ICE),SUV,España,100950,124328,23378
+X5 xDrive 40i,Combustión Tradicional (ICE),SUV,Alemania,95200,115430,20230
+X5 xDrive 40i,Combustión Tradicional (ICE),SUV,Francia,97500,119160,21660
+X5 xDrive 40i,Combustión Tradicional (ICE),SUV,Portugal,108950,136222,27272
+X5 xDrive 40i,Combustión Tradicional (ICE),SUV,Suiza,103404,113726,10322
+X5 xDrive 30d,Combustión Tradicional (ICE),SUV,España,96150,118520,22370
+X5 xDrive 30d,Combustión Tradicional (ICE),SUV,Alemania,98100,118881,20781
+X5 xDrive 30d,Combustión Tradicional (ICE),SUV,Francia,102700,125400,22700
+X5 xDrive 30d,Combustión Tradicional (ICE),SUV,Portugal,112300,140343,28043
+X5 xDrive 30d,Combustión Tradicional (ICE),SUV,Suiza,105744,116255,10511
+X6 xDrive 40i M Sport,Combustión Tradicional (ICE),SUV,España,134450,164862,30412
+X6 xDrive 40i M Sport,Combustión Tradicional (ICE),SUV,Alemania,123500,149107,25607
+X6 xDrive 40i M Sport,Combustión Tradicional (ICE),SUV,Francia,124290,151308,27018
+X6 xDrive 40i M Sport,Combustión Tradicional (ICE),SUV,Portugal,116300,145263,28963
+X6 xDrive 40i M Sport,Combustión Tradicional (ICE),SUV,Suiza,128468,140820,12352
+X6 xDrive 30d M Sport,Combustión Tradicional (ICE),SUV,España,103400,127292,23892
+X6 xDrive 30d M Sport,Combustión Tradicional (ICE),SUV,Alemania,90500,109837,19337
+X6 xDrive 30d M Sport,Combustión Tradicional (ICE),SUV,Francia,115000,140160,25160
+X6 xDrive 30d M Sport,Combustión Tradicional (ICE),SUV,Portugal,119000,148584,29584
+X6 xDrive 30d M Sport,Combustión Tradicional (ICE),SUV,Suiza,118787,130355,11568
+X7 xDrive 4i,Combustión Tradicional (ICE),SUV,España,123150,151190,28040
+X7 xDrive 4i,Combustión Tradicional (ICE),SUV,Alemania,106500,128877,22377
+X7 xDrive 4i,Combustión Tradicional (ICE),SUV,Francia,106800,130320,23520
+X7 xDrive 4i,Combustión Tradicional (ICE),SUV,Portugal,132300,164943,32643
+X7 xDrive 4i,Combustión Tradicional (ICE),SUV,Suiza,0,1946,1946
+X7 xDrive 40d,Combustión Tradicional (ICE),SUV,España,124900,153307,28407
+X7 xDrive 40d,Combustión Tradicional (ICE),SUV,Alemania,108500,131257,22757
+X7 xDrive 40d,Combustión Tradicional (ICE),SUV,Francia,110500,134760,24260
+X7 xDrive 40d,Combustión Tradicional (ICE),SUV,Portugal,149000,185484,36484
+X7 xDrive 40d,Combustión Tradicional (ICE),SUV,Suiza,142021,155471,13450
+Serie 4 Cabrio 420i,Combustión Tradicional (ICE),Berlina,España,64800,79860,15060
+Serie 4 Cabrio 420i,Combustión Tradicional (ICE),Berlina,Alemania,61400,74494,13094
+Serie 4 Cabrio 420i,Combustión Tradicional (ICE),Berlina,Francia,63000,77040,14040
+Serie 4 Cabrio 420i,Combustión Tradicional (ICE),Berlina,Portugal,64850,81242,16392
+Serie 4 Cabrio 420i,Combustión Tradicional (ICE),Berlina,Suiza,74893,82257,7364
+Serie 4 Cabrio 420d,Combustión Tradicional (ICE),Berlina,España,66600,82038,15438
+Serie 4 Cabrio 420d,Combustión Tradicional (ICE),Berlina,Alemania,64300,77945,13645
+Serie 4 Cabrio 420d,Combustión Tradicional (ICE),Berlina,Francia,66500,81240,14740
+Serie 4 Cabrio 420d,Combustión Tradicional (ICE),Berlina,Portugal,68550,85792,17242
+Serie 4 Cabrio 420d,Combustión Tradicional (ICE),Berlina,Suiza,77659,85247,7588
+Z4 sDrive,Combustión Tradicional (ICE),Berlina,España,68180,83950,15770
+Z4 sDrive,Combustión Tradicional (ICE),Berlina,Alemania,66000,79968,13968
+Z4 sDrive,Combustión Tradicional (ICE),Berlina,Francia,67880,82896,15016
+Z4 sDrive,Combustión Tradicional (ICE),Berlina,Portugal,71200,89052,17852
+Z4 sDrive,Combustión Tradicional (ICE),Berlina,Suiza,71276,78347,7071
+I4 Gran Coupe eDrive 35,Eléctrico Puro (BEV),Berlina,España,58650,72418,13768
+I4 Gran Coupe eDrive 35,Eléctrico Puro (BEV),Berlina,Alemania,58200,70686,12486
+I4 Gran Coupe eDrive 35,Eléctrico Puro (BEV),Berlina,Francia,60250,73740,13490
+I4 Gran Coupe eDrive 35,Eléctrico Puro (BEV),Berlina,Portugal,64800,81180,16380
+I4 Gran Coupe eDrive 35,Eléctrico Puro (BEV),Berlina,Suiza,66914,73631,6717
+i5 eDrive 40,Eléctrico Puro (BEV),Berlina,España,77050,94682,17632
+i5 eDrive 40,Eléctrico Puro (BEV),Berlina,Alemania,70900,85799,14899
+i5 eDrive 40,Eléctrico Puro (BEV),Berlina,Francia,75000,91440,16440
+i5 eDrive 40,Eléctrico Puro (BEV),Berlina,Portugal,73500,91881,18381
+i5 eDrive 40,Eléctrico Puro (BEV),Berlina,Suiza,82872,90882,8010
+i5 Touring eDrive 40,Eléctrico Puro (BEV),Berlina,España,79650,97828,18178
+i5 Touring eDrive 40,Eléctrico Puro (BEV),Berlina,Alemania,72900,88179,15279
+i5 Touring eDrive 40,Eléctrico Puro (BEV),Berlina,Francia,79800,97200,17400
+i5 Touring eDrive 40,Eléctrico Puro (BEV),Berlina,Portugal,75000,93726,18726
+i5 Touring eDrive 40,Eléctrico Puro (BEV),Berlina,Suiza,85531,93756,8225
+i7 eDrive 50,Eléctrico Puro (BEV),Berlina,España,116000,141812,25812
+i7 eDrive 50,Eléctrico Puro (BEV),Berlina,Alemania,115900,139349,23449
+i7 eDrive 50,Eléctrico Puro (BEV),Berlina,Francia,118900,144120,25220
+i7 eDrive 50,Eléctrico Puro (BEV),Berlina,Portugal,122000,151536,29536
+i7 eDrive 50,Eléctrico Puro (BEV),Berlina,Suiza,152872,166552,13680
+iX1 eDrive 20,Eléctrico Puro (BEV),SUV,España,49800,62436,12636
+iX1 eDrive 20,Eléctrico Puro (BEV),SUV,Alemania,49400,60928,11528
+iX1 eDrive 20,Eléctrico Puro (BEV),SUV,Francia,52000,64560,12560
+iX1 eDrive 20,Eléctrico Puro (BEV),SUV,Portugal,49700,63345,13645
+iX1 eDrive 20,Eléctrico Puro (BEV),SUV,Suiza,55531,61975,6444
+iX2 eDrive 20,Eléctrico Puro (BEV),SUV,España,51300,64251,12951
+iX2 eDrive 20,Eléctrico Puro (BEV),SUV,Alemania,51000,62832,11832
+iX2 eDrive 20,Eléctrico Puro (BEV),SUV,Francia,55100,68280,13180
+iX2 eDrive 20,Eléctrico Puro (BEV),SUV,Portugal,51100,65067,13967
+iX2 eDrive 20,Eléctrico Puro (BEV),SUV,Suiza,57765,64390,6625
+iX3 xDrive 50,Eléctrico Puro (BEV),SUV,España,69900,86757,16857
+iX3 xDrive 50,Eléctrico Puro (BEV),SUV,Alemania,70900,86513,15613
+iX3 xDrive 50,Eléctrico Puro (BEV),SUV,Francia,72500,89160,16660
+iX3 xDrive 50,Eléctrico Puro (BEV),SUV,Portugal,72900,91881,18981
+iX3 xDrive 50,Eléctrico Puro (BEV),SUV,Suiza,74042,81985,7943
+iX xDrive 45,Eléctrico Puro (BEV),SUV,España,88700,109505,20805
+iX xDrive 45,Eléctrico Puro (BEV),SUV,Alemania,83500,101507,18007
+iX xDrive 45,Eléctrico Puro (BEV),SUV,Francia,86000,105360,19360
+iX xDrive 45,Eléctrico Puro (BEV),SUV,Portugal,87000,109224,22224
+iX xDrive 45,Eléctrico Puro (BEV),SUV,Suiza,105212,115680,10468
+Serie 2 Active Tourer 225e,Híbrido Enchufable (PHEV),Berlina,España,51900,64251,12351
+Serie 2 Active Tourer 225e,Híbrido Enchufable (PHEV),Berlina,Alemania,49150,59916,10766
+Serie 2 Active Tourer 225e,Híbrido Enchufable (PHEV),Berlina,Francia,52650,64620,11970
+Serie 2 Active Tourer 225e,Híbrido Enchufable (PHEV),Berlina,Portugal,47700,60147,12447
+Serie 2 Active Tourer 225e,Híbrido Enchufable (PHEV),Berlina,Suiza,56276,62132,5856
+Serie 3 330e,Híbrido Enchufable (PHEV),Berlina,España,61250,75564,14314
+Serie 3 330e,Híbrido Enchufable (PHEV),Berlina,Alemania,63300,76755,13455
+Serie 3 330e,Híbrido Enchufable (PHEV),Berlina,Francia,65800,80400,14600
+Serie 3 330e,Híbrido Enchufable (PHEV),Berlina,Portugal,57200,71832,14632
+Serie 3 330e,Híbrido Enchufable (PHEV),Berlina,Suiza,71489,78577,7088
+Serie 3 Touring 330e,Híbrido Enchufable (PHEV),Berlina,España,65750,81010,15260
+Serie 3 Touring 330e,Híbrido Enchufable (PHEV),Berlina,Alemania,64600,78302,13702
+Serie 3 Touring 330e,Híbrido Enchufable (PHEV),Berlina,Francia,69300,84600,15300
+Serie 3 Touring 330e,Híbrido Enchufable (PHEV),Berlina,Portugal,58500,73431,14931
+Serie 3 Touring 330e,Híbrido Enchufable (PHEV),Berlina,Suiza,73510,80762,7252
+Serie 5 530e,Híbrido Enchufable (PHEV),Berlina,España,73350,90206,16856
+Serie 5 530e,Híbrido Enchufable (PHEV),Berlina,Alemania,68700,83181,14481
+Serie 5 530e,Híbrido Enchufable (PHEV),Berlina,Francia,69650,85020,15370
+Serie 5 530e,Híbrido Enchufable (PHEV),Berlina,Portugal,71750,89728,17978
+Serie 5 530e,Híbrido Enchufable (PHEV),Berlina,Suiza,78085,85707,7622
+Serie 5 Touring 530e,Híbrido Enchufable (PHEV),Berlina,España,75950,93352,17402
+Serie 5 Touring 530e,Híbrido Enchufable (PHEV),Berlina,Alemania,68700,83181,14481
+Serie 5 Touring 530e,Híbrido Enchufable (PHEV),Berlina,Francia,71250,86940,15690
+Serie 5 Touring 530e,Híbrido Enchufable (PHEV),Berlina,Portugal,73750,92188,18438
+Serie 5 Touring 530e,Híbrido Enchufable (PHEV),Berlina,Suiza,80744,88581,7837
+Serie 7 750e,Híbrido Enchufable (PHEV),Berlina,España,134850,164620,29770
+Serie 7 750e,Híbrido Enchufable (PHEV),Berlina,Alemania,128100,153867,25767
+Serie 7 750e,Híbrido Enchufable (PHEV),Berlina,Francia,131000,158640,27640
+Serie 7 750e,Híbrido Enchufable (PHEV),Berlina,Portugal,137000,169986,32986
+Serie 7 750e,Híbrido Enchufable (PHEV),Berlina,Suiza,137234,149647,12413
+X1 xDrive 25e,Combustión Tradicional (ICE),SUV,España,56800,70906,14106
+X1 xDrive 25e,Combustión Tradicional (ICE),SUV,Alemania,51600,63546,11946
+X1 xDrive 25e,Combustión Tradicional (ICE),SUV,Francia,52800,65520,12720
+X1 xDrive 25e,Combustión Tradicional (ICE),SUV,Portugal,56000,71094,15094
+X1 xDrive 25e,Combustión Tradicional (ICE),SUV,Suiza,62978,70025,7047
+X3 xDrive 30e,Combustión Tradicional (ICE),SUV,España,67300,83611,16311
+X3 xDrive 30e,Combustión Tradicional (ICE),SUV,Alemania,66900,81753,14853
+X3 xDrive 30e,Combustión Tradicional (ICE),SUV,Francia,68900,84840,15940
+X3 xDrive 30e,Combustión Tradicional (ICE),SUV,Portugal,73900,93111,19211
+X3 xDrive 30e,Combustión Tradicional (ICE),SUV,Suiza,76914,85090,8176
+X5 xDrive 50e,Híbrido Enchufable (PHEV),SUV,España,104600,128744,24144
+X5 xDrive 50e,Híbrido Enchufable (PHEV),SUV,Alemania,97900,118643,20743
+X5 xDrive 50e,Híbrido Enchufable (PHEV),SUV,Francia,101950,124500,22550
+X5 xDrive 50e,Híbrido Enchufable (PHEV),SUV,Portugal,106900,133701,26801
+X5 xDrive 50e,Híbrido Enchufable (PHEV),SUV,Suiza,105319,115796,10477
+Serie 1 M135 xDrive,Combustión Tradicional (ICE),Berlina,España,62850,78226,15376
+Serie 1 M135 xDrive,Combustión Tradicional (ICE),Berlina,Alemania,57150,70150,13000
+Serie 1 M135 xDrive,Combustión Tradicional (ICE),Berlina,Francia,59650,73740,14090
+Serie 1 M135 xDrive,Combustión Tradicional (ICE),Berlina,Portugal,61500,77859,16359
+Serie 1 M135 xDrive,Combustión Tradicional (ICE),Berlina,Suiza,71808,79570,7762
+Serie 2 Gran Coupe M235i xDrive,Combustión Tradicional (ICE),Berlina,España,66350,82462,16112
+Serie 2 Gran Coupe M235i xDrive,Combustión Tradicional (ICE),Berlina,Alemania,60650,74316,13666
+Serie 2 Gran Coupe M235i xDrive,Combustión Tradicional (ICE),Berlina,Francia,62150,76740,14590
+Serie 2 Gran Coupe M235i xDrive,Combustión Tradicional (ICE),Berlina,Portugal,65000,82164,17164
+Serie 2 Gran Coupe M235i xDrive,Combustión Tradicional (ICE),Berlina,Suiza,75212,83250,8038
+M2,Combustión Tradicional (ICE),Berlina,España,97500,120153,22653
+M2,Combustión Tradicional (ICE),Berlina,Alemania,77500,94367,16867
+M2,Combustión Tradicional (ICE),Berlina,Francia,81550,100020,18470
+M2,Combustión Tradicional (ICE),Berlina,Portugal,97900,122631,24731
+M2,Combustión Tradicional (ICE),Berlina,Suiza,104148,114530,10382
+M3,Combustión Tradicional (ICE),Berlina,España,128300,157421,29121
+M3,Combustión Tradicional (ICE),Berlina,Alemania,96500,116977,20477
+M3,Combustión Tradicional (ICE),Berlina,Francia,99800,121920,22120
+M3,Combustión Tradicional (ICE),Berlina,Portugal,129000,160884,31884
+M3,Combustión Tradicional (ICE),Berlina,Suiza,132340,145005,12665
+M3 Touring,Combustión Tradicional (ICE),Berlina,España,134350,164742,30392
+M3 Touring,Combustión Tradicional (ICE),Berlina,Alemania,108900,131733,22833
+M3 Touring,Combustión Tradicional (ICE),Berlina,Francia,108950,132900,23950
+M3 Touring,Combustión Tradicional (ICE),Berlina,Portugal,137200,170970,33770
+M3 Touring,Combustión Tradicional (ICE),Berlina,Suiza,145319,159036,13717
+Serie 3 M340i xDrive,Combustión Tradicional (ICE),Berlina,España,84900,104907,20007
+Serie 3 M340i xDrive,Combustión Tradicional (ICE),Berlina,Alemania,72500,88417,15917
+Serie 3 M340i xDrive,Combustión Tradicional (ICE),Berlina,Francia,78100,95880,17780
+Serie 3 M340i xDrive,Combustión Tradicional (ICE),Berlina,Portugal,88750,111376,22626
+Serie 3 M340i xDrive,Combustión Tradicional (ICE),Berlina,Suiza,88723,97855,9132
+Serie 3 Touring M340i xDrive,Combustión Tradicional (ICE),Berlina,España,86900,107327,20427
+Serie 3 Touring M340i xDrive,Combustión Tradicional (ICE),Berlina,Alemania,78800,95914,17114
+Serie 3 Touring M340i xDrive,Combustión Tradicional (ICE),Berlina,Francia,80200,98400,18200
+Serie 3 Touring M340i xDrive,Combustión Tradicional (ICE),Berlina,Portugal,90050,112976,22926
+Serie 3 Touring M340i xDrive,Combustión Tradicional (ICE),Berlina,Suiza,95106,104755,9649
+Serie 3 Touring M340d xDrive,Combustión Tradicional (ICE),Berlina,España,86500,106843,20343
+Serie 3 Touring M340d xDrive,Combustión Tradicional (ICE),Berlina,Alemania,78800,95914,17114
+Serie 3 Touring M340d xDrive,Combustión Tradicional (ICE),Berlina,Francia,81560,100032,18472
+Serie 3 Touring M340d xDrive,Combustión Tradicional (ICE),Berlina,Portugal,94950,119002,24052
+Serie 3 Touring M340d xDrive,Combustión Tradicional (ICE),Berlina,Suiza,96382,106135,9753
+M4 Coupe,Combustión Tradicional (ICE),Berlina,España,130400,159962,29562
+M4 Coupe,Combustión Tradicional (ICE),Berlina,Alemania,98500,119357,20857
+M4 Coupe,Combustión Tradicional (ICE),Berlina,Francia,102650,125340,22690
+M4 Coupe,Combustión Tradicional (ICE),Berlina,Portugal,130850,163160,32310
+M4 Coupe,Combustión Tradicional (ICE),Berlina,Suiza,134255,147075,12820
+Serie 4 M440i xDrive,Combustión Tradicional (ICE),Berlina,España,84700,104665,19965
+Serie 4 M440i xDrive,Combustión Tradicional (ICE),Berlina,Alemania,77600,94486,16886
+Serie 4 M440i xDrive,Combustión Tradicional (ICE),Berlina,Francia,79860,97992,18132
+Serie 4 M440i xDrive,Combustión Tradicional (ICE),Berlina,Portugal,95000,119064,24064
+Serie 4 M440i xDrive,Combustión Tradicional (ICE),Berlina,Suiza,94255,103835,9580
+Serie 4 M440d xDrive,Combustión Tradicional (ICE),Berlina,España,86550,106904,20354
+Serie 4 M440d xDrive,Combustión Tradicional (ICE),Berlina,Alemania,78600,95676,17076
+Serie 4 M440d xDrive,Combustión Tradicional (ICE),Berlina,Francia,78550,96420,17870
+Serie 4 M440d xDrive,Combustión Tradicional (ICE),Berlina,Portugal,94350,118264,23914
+Serie 4 M440d xDrive,Combustión Tradicional (ICE),Berlina,Suiza,95531,105215,9684
+M4 Cabrio,Combustión Tradicional (ICE),Berlina,España,140000,171578,31578
+M4 Cabrio,Combustión Tradicional (ICE),Berlina,Alemania,114100,137921,23821
+M4 Cabrio,Combustión Tradicional (ICE),Berlina,Francia,131250,159660,28410
+M4 Cabrio,Combustión Tradicional (ICE),Berlina,Portugal,142700,177735,35035
+M4 Cabrio,Combustión Tradicional (ICE),Berlina,Suiza,150638,164785,14147
+Serie 4 Cabrio M440i xDrive,Combustión Tradicional (ICE),Berlina,España,92650,114284,21634
+Serie 4 Cabrio M440i xDrive,Combustión Tradicional (ICE),Berlina,Alemania,85200,103530,18330
+Serie 4 Cabrio M440i xDrive,Combustión Tradicional (ICE),Berlina,Francia,86500,105960,19460
+Serie 4 Cabrio M440i xDrive,Combustión Tradicional (ICE),Berlina,Portugal,102500,128289,25789
+Serie 4 Cabrio M440i xDrive,Combustión Tradicional (ICE),Berlina,Suiza,96808,106595,9787
+Serie 4 Cabrio M440d xDrive,Combustión Tradicional (ICE),Berlina,España,94500,116523,22023
+Serie 4 Cabrio M440d xDrive,Combustión Tradicional (ICE),Berlina,Alemania,86200,104720,18520
+Serie 4 Cabrio M440d xDrive,Combustión Tradicional (ICE),Berlina,Francia,86500,105960,19460
+Serie 4 Cabrio M440d xDrive,Combustión Tradicional (ICE),Berlina,Portugal,101850,127490,25640
+Serie 4 Cabrio M440d xDrive,Combustión Tradicional (ICE),Berlina,Suiza,102659,112920,10261
+X1 M35i xDrive,Combustión Tradicional (ICE),SUV,España,73750,91416,17666
+X1 M35i xDrive,Combustión Tradicional (ICE),SUV,Alemania,65600,80206,14606
+X1 M35i xDrive,Combustión Tradicional (ICE),SUV,Francia,67650,83340,15690
+X1 M35i xDrive,Combustión Tradicional (ICE),SUV,Portugal,68150,86038,17888
+X1 M35i xDrive,Combustión Tradicional (ICE),SUV,Suiza,81702,90266,8564
+X2 M35i xDrive,Combustión Tradicional (ICE),SUV,España,75250,93230,17980
+X2 M35i xDrive,Combustión Tradicional (ICE),SUV,Alemania,67100,81991,14891
+X2 M35i xDrive,Combustión Tradicional (ICE),SUV,Francia,69900,86040,16140
+X2 M35i xDrive,Combustión Tradicional (ICE),SUV,Portugal,70400,88806,18406
+X2 M35i xDrive,Combustión Tradicional (ICE),SUV,Suiza,83617,92336,8719
+X3 M50i xDrive,Combustión Tradicional (ICE),SUV,España,91700,113135,21435
+X3 M50i xDrive,Combustión Tradicional (ICE),SUV,Alemania,85200,103530,18330
+X3 M50i xDrive,Combustión Tradicional (ICE),SUV,Francia,88200,108000,19800
+X3 M50i xDrive,Combustión Tradicional (ICE),SUV,Portugal,99450,124538,25088
+X3 M50i xDrive,Combustión Tradicional (ICE),SUV,Suiza,111489,122465,10976
+X5 M,Combustión Tradicional (ICE),SUV,España,183450,224152,40702
+X5 M,Combustión Tradicional (ICE),SUV,Alemania,168500,202657,34157
+X5 M,Combustión Tradicional (ICE),SUV,Francia,172350,208980,36630
+X5 M,Combustión Tradicional (ICE),SUV,Portugal,232050,287636,55586
+X5 M,Combustión Tradicional (ICE),SUV,Suiza,180851,197446,16595
+X5 M60i xDrive,Combustión Tradicional (ICE),SUV,España,128850,158086,29236
+X5 M60i xDrive,Combustión Tradicional (ICE),SUV,Alemania,120000,144942,24942
+X5 M60i xDrive,Combustión Tradicional (ICE),SUV,Francia,122000,148560,26560
+X5 M60i xDrive,Combustión Tradicional (ICE),SUV,Portugal,154650,192434,37784
+X5 M60i xDrive,Combustión Tradicional (ICE),SUV,Suiza,143617,157196,13579
+X6 M,Combustión Tradicional (ICE),SUV,España,187050,228508,41458
+X6 M,Combustión Tradicional (ICE),SUV,Alemania,171900,206703,34803
+X6 M,Combustión Tradicional (ICE),SUV,Francia,175000,212160,37160
+X6 M,Combustión Tradicional (ICE),SUV,Portugal,235000,291264,56264
+X6 M,Combustión Tradicional (ICE),SUV,Suiza,205957,224585,18628
+X6 M60i xDrive,Combustión Tradicional (ICE),SUV,España,134450,164862,30412
+X6 M60i xDrive,Combustión Tradicional (ICE),SUV,Alemania,123500,149107,25607
+X6 M60i xDrive,Combustión Tradicional (ICE),SUV,Francia,123000,149760,26760
+X6 M60i xDrive,Combustión Tradicional (ICE),SUV,Portugal,157550,196000,38450
+X6 M60i xDrive,Combustión Tradicional (ICE),SUV,Suiza,164148,179390,15242
+X7 M60i xDrive,Combustión Tradicional (ICE),SUV,España,155400,190212,34812
+X7 M60i xDrive,Combustión Tradicional (ICE),SUV,Alemania,138000,166362,28362
+X7 M60i xDrive,Combustión Tradicional (ICE),SUV,Francia,140000,170160,30160
+X7 M60i xDrive,Combustión Tradicional (ICE),SUV,Portugal,182550,226750,44200
+X7 M60i xDrive,Combustión Tradicional (ICE),SUV,Suiza,179893,196410,16517
+XM,Híbrido Enchufable (PHEV),SUV,España,190900,233167,42267
+XM,Híbrido Enchufable (PHEV),SUV,Alemania,135500,163387,27887
+XM,Híbrido Enchufable (PHEV),SUV,Francia,149850,181980,32130
+XM,Híbrido Enchufable (PHEV),SUV,Portugal,155550,193540,37990
+XM,Híbrido Enchufable (PHEV),SUV,Suiza,150425,164555,14130
