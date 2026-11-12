@@ -912,3 +912,62 @@ SELECT
     ) AS impacto_visual_bev
 FROM resumen
 ORDER BY impacto_medio_euro7 DESC;
+
+-- MANEJO DE JSONB
+-- ver todos los modelos disponibles dentro de cada categoría de carrocería en una línea
+SELECT 
+    "categoria_carroceria",
+    COUNT(*) AS total,
+    ARRAY_AGG(TRIM("Modelo") ORDER BY "España" ASC) AS lista_modelos
+FROM "analisis_precios_bmw_euro7"
+WHERE "España" IS NOT NULL
+GROUP BY "categoria_carroceria";
+
+-- UNNEST:
+SELECT UNNEST(ARRAY['España', 'Portugal', 'Suiza']) AS mercado_objetivo;
+
+-- Construcción de JSON
+-- Un objeto por fila (JSONB_BUILD_OBJECT)
+SELECT 
+    TRIM("Modelo") AS modelo,
+    JSONB_BUILD_OBJECT(
+        'tecnologia', TRIM("Tecnologia"),
+        'precios_espana', JSONB_BUILD_OBJECT(
+            'base', "España",
+            'euro7', "PVP_Euro7_España",
+            'sobrecoste', ("PVP_Euro7_España" - "España")
+        ),
+        'ruta_optima', CONCAT(TRIM("Pais_Min"), ' -> ', TRIM("Pais_Max"))
+    ) AS ficha_json
+FROM "analisis_precios_bmw_euro7"
+WHERE "España" IS NOT NULL
+LIMIT 5;
+
+-- Lectura y consulta dentro de campos JSONB
+-- Columna: datos_coche 
+-- Ejemplo de lectura sobre una columna JSONB ficticia
+WITH tabla_virtual_json AS (
+    -- Paso 1: Convertimos columnas reales en un objeto JSONB llamado "datos_coche"
+    SELECT 
+        JSONB_BUILD_OBJECT(
+            'modelo', TRIM("Modelo"),
+            'tecnologia', TRIM("Tecnologia"),
+            'precios', JSONB_BUILD_OBJECT(
+                'espana', "España",
+                'euro7_espana', "PVP_Euro7_España"
+            )
+        ) AS datos_coche
+    FROM "analisis_precios_bmw_euro7"
+    WHERE "España" IS NOT NULL
+)
+-- Leer JSONB usando -> y ->>
+SELECT 
+    datos_coche ->> 'modelo' AS modelo,
+    (datos_coche -> 'precios' ->> 'espana')::NUMERIC AS precio_es,
+    (datos_coche -> 'precios' ->> 'euro7_espana')::NUMERIC AS precio_euro7_es
+FROM tabla_virtual_json
+WHERE datos_coche ->> 'tecnologia' LIKE '%Puro%';
+
+
+
+
