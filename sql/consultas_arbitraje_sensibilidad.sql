@@ -365,7 +365,8 @@ WITH estadisticos AS (
         AVG("PVP_Euro7_Portugal") AS media_euro7,
         STDDEV_POP("PVP_Euro7_Portugal") AS stddev_euro7
     FROM "analisis_precios_bmw_euro7"
-    WHERE "Portugal" IS NOT NULL AND "PVP_Euro7_Portugal" IS NOT NULL
+    WHERE "Portugal" IS NOT NULL 
+      AND "PVP_Euro7_Portugal" IS NOT NULL
 )
 SELECT 
     p."Modelo",
@@ -376,9 +377,13 @@ SELECT
     p."PVP_Euro7_Portugal" AS precio_euro7,
     ROUND(e.media_euro7, 2) AS media_mercado_euro7,
     ROUND(p."PVP_Euro7_Portugal" - e.media_euro7, 2) AS distancia_a_la_media_e7,
-    ROUND(CAST((p."PVP_Euro7_Portugal" - e.media_euro7) / e.stddev_euro7 AS NUMERIC), 2) AS desviaciones_estandar_e7
-FROM "analisis_precios_bmw_euro7" p, estadisticos e
-WHERE p."Modelo" LIKE 'X6 M %' OR p."Modelo" = 'X6 M';
+    ROUND(CAST((p."PVP_Euro7_Portugal" - e.stddev_euro7) / e.stddev_euro7 AS NUMERIC), 2) AS desviaciones_estandar_e7
+FROM "analisis_precios_bmw_euro7" p
+CROSS JOIN estadisticos e
+WHERE (p."Modelo" LIKE 'X6 M %' OR p."Modelo" = 'X6 M')
+  AND p."Portugal" IS NOT NULL 
+  AND p."PVP_Euro7_Portugal" IS NOT NULL;
+
 
 -- COMPARATIVA DE MARGENES NETOS: PORTUGAL VS SUIZA (POST-EURO 7)
 -- Aplica costes logísticos fijos (2500€) y evalúa rentabilidad mayor a 5000€ en cualquiera de los destinos
@@ -967,6 +972,27 @@ SELECT
     (datos_coche -> 'precios' ->> 'euro7_espana')::NUMERIC AS precio_euro7_es
 FROM tabla_virtual_json
 WHERE datos_coche ->> 'tecnologia' LIKE '%Puro%';
+
+-- tabla completa (con desviaciones estándar)
+SELECT 
+    "Modelo",
+    "Portugal" AS precio_original,
+    ROUND(AVG("Portugal") OVER(), 2) AS media_mercado_original,
+    ROUND("Portugal" - AVG("Portugal") OVER(), 2) AS distancia_media_orig,
+    ROUND(CAST(("Portugal" - AVG("Portugal") OVER()) / STDDEV_POP("Portugal") OVER() AS NUMERIC), 2) AS z_score_original,
+    "PVP_Euro7_Portugal" AS precio_euro7,
+    ROUND(AVG("PVP_Euro7_Portugal") OVER(), 2) AS media_mercado_euro7,
+    ROUND("PVP_Euro7_Portugal" - AVG("PVP_Euro7_Portugal") OVER(), 2) AS distancia_media_e7,
+    ROUND(CAST(("PVP_Euro7_Portugal" - AVG("PVP_Euro7_Portugal") OVER()) / STDDEV_POP("PVP_Euro7_Portugal") OVER() AS NUMERIC), 2) AS z_score_euro7,
+    ROUND(
+        CAST((("PVP_Euro7_Portugal" - AVG("PVP_Euro7_Portugal") OVER()) / STDDEV_POP("PVP_Euro7_Portugal") OVER()) 
+        - (("Portugal" - AVG("Portugal") OVER()) / STDDEV_POP("Portugal") OVER()) AS NUMERIC), 
+    2) AS variacion_z_score
+FROM "analisis_precios_bmw_euro7"
+WHERE "Portugal" IS NOT NULL 
+  AND "PVP_Euro7_Portugal" IS NOT NULL
+ORDER BY z_score_euro7 DESC;
+
 
 
 
