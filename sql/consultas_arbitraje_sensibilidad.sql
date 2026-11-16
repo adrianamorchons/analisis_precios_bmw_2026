@@ -973,7 +973,7 @@ SELECT
 FROM tabla_virtual_json
 WHERE datos_coche ->> 'tecnologia' LIKE '%Puro%';
 
--- tabla completa (con desviaciones estándar)
+-- tabla completa (con desviaciones estándar) para Portugal 
 SELECT 
     "Modelo",
     "Portugal" AS precio_original,
