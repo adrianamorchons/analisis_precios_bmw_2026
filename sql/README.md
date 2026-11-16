@@ -40,6 +40,13 @@ Mediante la ejecución de un algoritmo de filtrado en la cláusula `WHERE` que d
 2.  **Consistencia en Volumen Medio:** Las variantes de acceso de la Serie 3 (*318d* y *318d Touring*) demuestran una solidez financiera sobresaliente con rendimientos que superan el **22% de ROI neto** y beneficios limpios de **~11.800 €** por coche, requiriendo inversiones iniciales contenidas en origen.
 3.  **Veto Comercial y Umbral de Riesgo:** Los modelos *Serie 5 Touring 520d* (ROI: 6,07% / Margen: 4.007 €) y *Serie 2 Gran Coupé 220d* (ROI: 5,16% / Margen: 2.257 €) cierran el límite de viabilidad. Quedan catalogados como operaciones de alto riesgo, ya que el peso del coste fijo logístico y el impacto de la Euro 7 comprometen peligrosamente el beneficio ante variaciones imprevistas en la aduana helvética.
 
+4.  # Módulo de Modelado Relacional y SQL Analítico (Euro 7 & Arbitraje)
+
+Este módulo contiene el desarrollo analítico basado en **SQL** para evaluar el impacto financiero de la normativa Euro 7 sobre el catálogo de BMW Europa y modelar las ventanas de arbitraje transfronterizo.
+Aislamiento de Outliers (Portugal)
+Tomando Portugal como muestra extrema de precios y dispersión fiscal (`STDDEV_POP`), la combinación de Euro 7 e impuesto ISV desplaza a los modelos de altas prestaciones:
+*   **BMW X6 M (Post-Euro 7):** **291.264 €** (+3.57 desviaciones estándar ($\sigma$) respecto a la media lusa de 105.748 €).
+
 ---
 
 ## 🛠️ Stack Tecnológico y Entorno de Ejecución
