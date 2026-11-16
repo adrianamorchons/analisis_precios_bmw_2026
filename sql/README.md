@@ -33,14 +33,14 @@ A través de funciones de dispersión poblacional (`STDDEV_POP`), se determinó 
 *   **BMW X6 M (Post-Euro 7):** **291.264 €**
 *   **Distancia matemática:** Situado a **+3.57 desviaciones estándar ($\sigma$)** respecto a la media del mercado luso ($\mu$: 105.748 €), confirmando su estatus de anomalía estadística extrema.
 
-### B. Ventana de Arbitraje de Alta Eficiencia (Caso de Éxito: Suiza)
+### Ventana de Arbitraje de Alta Eficiencia (Caso de Éxito: Suiza)
 Mediante la ejecución de un algoritmo de filtrado en la cláusula `WHERE` que deduce el coste normativo variable de la Euro 7 en destino y **2.500 € de costes logísticos fijos**, se aisló el comportamiento real de la importación desde España a Suiza en motores diésel, arrojando una matriz de viabilidad neta:
 
 1.  **Líder Absoluto en Eficiencia de Capital:** El **BMW Serie 4 Coupé 420d** se consolida como la operación maestra del ecosistema. Presenta un **Retorno de Inversión (ROI) neto del 42,97%** y un **margen neto absoluto de 25.246 € líquidos** por unidad comercializada, impulsado por una gigantesca brecha de precio bruto inicial (95.531 € en Suiza vs 58.750 € en España) que absorbe sin dificultad los 9.035 € de castigo normativo Euro 7.
 2.  **Consistencia en Volumen Medio:** Las variantes de acceso de la Serie 3 (*318d* y *318d Touring*) demuestran una solidez financiera sobresaliente con rendimientos que superan el **22% de ROI neto** y beneficios limpios de **~11.800 €** por coche, requiriendo inversiones iniciales contenidas en origen.
 3.  **Veto Comercial y Umbral de Riesgo:** Los modelos *Serie 5 Touring 520d* (ROI: 6,07% / Margen: 4.007 €) y *Serie 2 Gran Coupé 220d* (ROI: 5,16% / Margen: 2.257 €) cierran el límite de viabilidad. Quedan catalogados como operaciones de alto riesgo, ya que el peso del coste fijo logístico y el impacto de la Euro 7 comprometen peligrosamente el beneficio ante variaciones imprevistas en la aduana helvética.
 
-4.  # Módulo de Modelado Relacional y SQL Analítico (Euro 7 & Arbitraje)
+# Módulo de Modelado Relacional y SQL Analítico (Euro 7 & Arbitraje)
 
 Este módulo contiene el desarrollo analítico basado en **SQL** para evaluar el impacto financiero de la normativa Euro 7 sobre el catálogo de BMW Europa y modelar las ventanas de arbitraje transfronterizo.
 Aislamiento de Outliers (Portugal)
