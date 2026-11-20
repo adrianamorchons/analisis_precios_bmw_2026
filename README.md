@@ -25,3 +25,7 @@ El proyecto se divide en módulos que cubren desde la ingesta de datos (datasets
 2. **Detección de Outliers:** Boxplots para aislar gamas de gran lujo (como las variantes M y XM).
 3. **Matrices de Correlación:** Mapas de calor para validar la sincronización de precios transfronterizos.
 4. **Impacto Fiscal y Financiero:** Simulaciones lineales de carga de IVA y modelos de crédito indexados a las condiciones de BMW Select (TAE, TIN y cuotas).
+
+## 📄 Tablas y Documentación
+* [Catálogo de Precios BMW 2026 por Mercado (PDF)](docs/bmw_prices_2026.pdf)
+* [Análisis Completo de Impacto Normativa Euro 7 (PDF)](docs/analisis_precios_bmw_euro7.pdf)
