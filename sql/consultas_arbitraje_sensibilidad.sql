@@ -992,8 +992,3 @@ FROM "analisis_precios_bmw_euro7"
 WHERE "Portugal" IS NOT NULL 
   AND "PVP_Euro7_Portugal" IS NOT NULL
 ORDER BY z_score_euro7 DESC;
-
-
-
-
-
